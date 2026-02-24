@@ -105,7 +105,7 @@ A modern, full-featured URL shortening application built with Next.js 16, Prisma
 2. **Configure environment variables**:
    Create a `.env.local` file in the root directory:
    ```
-   DATABASE_URL="mysql://user:password@localhost:3306/url_shortener"
+   NETLIFY_DATABASE_URL="mysql://user:password@localhost:3306/url_shortener"
    NEXTAUTH_SECRET="your-random-secret-key-here"
    NEXTAUTH_URL="http://localhost:3000"
    ```
@@ -194,7 +194,7 @@ Redirect to original URL (with optional password verification)
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `DATABASE_URL` | MySQL database connection string | `mysql://user:pass@localhost:3306/db` |
+| `NETLIFY_DATABASE_URL` | MySQL database connection string | `mysql://user:pass@localhost:3306/db` |
 | `NEXTAUTH_SECRET` | Secret key for NextAuth encryption | `your-random-key` |
 | `NEXTAUTH_URL` | Application URL for authentication | `http://localhost:3000` |
 
@@ -237,7 +237,7 @@ Redirect to original URL (with optional password verification)
 
 ### Database Connection Error
 - Verify MySQL is running
-- Check `DATABASE_URL` in `.env.local`
+- Check `NETLIFY_DATABASE_URL` in `.env.local`
 - Ensure database user has appropriate permissions
 
 ### NextAuth Configuration Issue
